@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+  - node
+git:
+  depth: false
+jobs:
+  include:
+#   - stage: test
+#     script: 
+#       - npm install -g codecov
+#       - yarn install --pure-lockfile
+#       - yarn build
+#       - yarn test
+#       - yarn coverage
+#       - codecov
+#       - yarn prettier
+#       - bash scripts/detect-changes.sh toi
+#       - bash scripts/detect-changes.sh toix
+    - stage: deploy
+      script:
+        - yarn install --pure-lockfile
+        - yarn build
+        - bash scripts/deploy.sh
+stages:
+#  - name: test
+#  if: (type = pull_request) OR ((type = push) AND (branch = master))
+  - name: deploy
+    if: (type = push) AND (branch = master)

@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "wsrun build"
+  },
+  "workspaces": ["packages/fluoride", "packages/examples"],
+  "devDependencies": {
+    "wsrun": "*"
+  }
+}
