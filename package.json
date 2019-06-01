@@ -1,10 +1,33 @@
 {
-  "private": true,
+  "name": "fluoride",
+  "version": "1.0.0",
+  "description": "Fluoride is a compile-time dependency injection framework for TypeScript.",
+  "main": "build/index.js",
+  "files": ["build/**/*.{js,js.map,d.ts,d.ts.map}", "LICENSE", "README.md"],
   "scripts": {
-    "build": "wsrun build"
+    "build": "tsc"
   },
-  "workspaces": ["packages/fluoride", "packages/examples"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hf/fluoride"
+  },
+  "keywords": [
+    "typescript",
+    "dependency",
+    "injection",
+    "compile-time",
+    "inversion",
+    "control",
+    "ioc",
+    "di",
+    "object",
+    "graph"
+  ],
+  "author": "Stojan Dimitrovski <sdimitrovski@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
-    "wsrun": "*"
+    "prettier": "^1.17.1",
+    "typescript": "^3.5.1"
   }
 }

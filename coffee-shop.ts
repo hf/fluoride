@@ -1,4 +1,4 @@
-import { GraphBuilder, Graph, scopes } from "fluoride";
+import { GraphBuilder, Graph, scopes } from "./index";
 
 abstract class Heater {
   abstract heat(): void;

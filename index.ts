@@ -206,7 +206,7 @@ export class GraphBuilder<D> {
   add<I, P, C extends I, O = D>(
     impl: Interface<I>,
     ctor: GraphConstructor<P, C>, // also supports EmptyConstructor by default
-    scope: Scope<P, I | O, C> = scopes.none
+    scope: Scope<P, I | D, C> = scopes.none
   ): D extends P ? GraphBuilder<I | O> : never {
     const map = new Map<any, any>(this.map);
 
